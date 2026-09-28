@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./src/assets/css/all.min.css">
+  <link rel="stylesheet" href="./src/assets/css/style.css">
+
+  <title>Checkout | Taste</title>
+</head>
+
+<body class="min-h-screen bg-[#0a0907] text-white">
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="fixed left-1/2 top-4 z-50 w-[94%] max-w-7xl -translate-x-1/2">
+
+    <nav class="flex items-center justify-between rounded-2xl
+      border border-white/10
+      bg-black/60
+      px-5 py-3
+      backdrop-blur-xl">
+
+      <!-- Logo -->
+
+      <a href="./index.html">
+        <img
+          src="./src/assets/images/logo.png"
+          alt="Restaurant Logo"
+          class="h-10 w-auto"
+        />
+      </a>
+
+
+      <!-- Navigation -->
+
+      <div class="hidden items-center gap-8 md:flex">
+
+        <a
+          href="./index.html"
+          class="text-sm text-white/60 transition
+          hover:text-[#e8b95c]">
+          Home
+        </a>
+
+        <a
+          href="./index.html#menu"
+          class="text-sm text-white/60 transition
+          hover:text-[#e8b95c]">
+          Menu
+        </a>
+
+        <a
+          href="./index.html#about"
+          class="text-sm text-white/60 transition
+          hover:text-[#e8b95c]">
+          About
+        </a>
+
+        <a
+          href="./index.html#reservations"
+          class="text-sm text-white/60 transition
+          hover:text-[#e8b95c]">
+          Reservations
+        </a>
+
+        <a
+          href="./index.html#contact"
+          class="text-sm text-white/60 transition
+          hover:text-[#e8b95c]">
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- Actions -->
+
+      <div class="flex items-center gap-3">
+
+        <!-- Cart -->
+
+        <a
+          href="./cart.html"
+          class="relative flex h-11 w-11 items-center
+          justify-center rounded-full
+          border border-white/10
+          bg-white/[0.03]
+          text-white/70
+          transition-all duration-300
+          hover:border-[#e8b95c]/50
+          hover:bg-[#e8b95c]/10
+          hover:text-[#e8b95c]">
+
+          <i class="fa-solid fa-cart-shopping text-sm"></i>
+
+          <span
+            id="Cart_Badge_Chackout"
+            class="absolute -right-1 -top-1
+            flex h-5 min-w-5 items-center justify-center
+            rounded-full
+            bg-[#e8b95c]
+            px-1 text-[10px]
+            font-bold text-black">
+
+            
+
+          </span>
+
+        </a>
+
+
+        <!-- Dashboard -->
+
+        <a
+          href="./deshboard.html"
+          class="hidden rounded-full
+          border border-white/10
+          px-4 py-2
+          text-xs font-semibold
+          text-white/60
+          transition
+          hover:border-[#e8b95c]/40
+          hover:text-[#e8b95c]
+          sm:block">
+
+          Dashboard
+
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ================= PAGE HEADER ================= -->
+
+  <section class="relative overflow-hidden pt-36 pb-16">
+
+    <!-- Glow -->
+
+    <div
+      class="absolute left-1/2 top-20
+      h-72 w-72
+      -translate-x-1/2
+      rounded-full
+      bg-[#e8b95c]/10
+      blur-[120px]">
+    </div>
+
+
+    <div class="relative mx-auto max-w-7xl px-5 text-center">
+
+      <p
+        class="mb-3 text-xs font-semibold uppercase
+        tracking-[0.35em] text-[#e8b95c]">
+
+        Almost There
+
+      </p>
+
+
+      <h1
+        class="font-['Cormorant_Garamond']
+        text-5xl font-semibold
+        md:text-6xl">
+
+        Checkout
+
+      </h1>
+
+
+      <p class="mx-auto mt-4 max-w-xl
+        text-sm leading-7 text-white/40">
+
+        Complete your details and place your order.
+        Your table is waiting for something extraordinary.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= CHECKOUT ================= -->
+
+  <main class="mx-auto max-w-7xl px-5 pb-24">
+
+    <div class="grid gap-7 lg:grid-cols-[1fr_380px]">
+
+
+      <!-- ================================================= -->
+      <!-- LEFT SIDE -->
+      <!-- ================================================= -->
+
+      <div class="space-y-6">
+
+
+        <!-- ================= ORDER REVIEW ================= -->
+
+       <section
+  class="rounded-3xl
+         border border-white/10
+         bg-[#12100c]
+         p-6"
+>
+
+  <!-- Header -->
+  <div class="mb-6 flex items-center justify-between">
+
+    <div>
+
+      <p
+        class="text-[10px] font-semibold uppercase
+               tracking-[0.25em]
+               text-[#e8b95c]"
+      >
+        Your Selection
+      </p>
+
+      <h2
+        class="mt-1
+               font-['Cormorant_Garamond']
+               text-3xl font-semibold"
+      >
+        Order Review
+      </h2>
+
+    </div>
+
+
+    <!-- Item Count -->
+    <span
+      id="Cart_Badge"
+      class="rounded-full
+             border border-[#e8b95c]/20
+             bg-[#e8b95c]/5
+             px-3 py-1
+             text-xs
+             text-[#e8b95c]"
+    >
+      0 Items
+    </span>
+
+  </div>
+
+
+  <!-- ================= CART ITEMS ================= -->
+
+  <div
+    id="order_review"
+    class="flex flex-col gap-4"
+  >
+
+
+   
+
+
+  </div>
+
+</section>
+
+
+
+        <!-- ================= DELIVERY INFORMATION ================= -->
+
+        <section
+          class="rounded-3xl
+          border border-white/10
+          bg-[#12100c]
+          p-6">
+
+          <div class="mb-6">
+
+            <p
+              class="text-[10px] font-semibold uppercase
+              tracking-[0.25em] text-[#e8b95c]">
+
+              Delivery
+
+            </p>
+
+            <h2
+              class="mt-1
+              font-['Cormorant_Garamond']
+              text-3xl font-semibold">
+
+              Delivery Information
+
+            </h2>
+
+          </div>
+
+
+          <div class="grid gap-4 md:grid-cols-2">
+
+
+            <!-- Name -->
+
+            <div>
+
+              <label
+                class="mb-2 block text-xs text-white/50">
+
+                Full Name
+
+              </label>
+
+              <input
+                type="text"
+                placeholder="Your full name"
+                class="w-full rounded-xl
+                border border-white/10
+                bg-white/[0.03]
+                px-4 py-3
+                text-sm text-white
+                outline-none
+                placeholder:text-white/20
+                transition
+                focus:border-[#e8b95c]/50
+                focus:bg-[#e8b95c]/5"
+              />
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div>
+
+              <label
+                class="mb-2 block text-xs text-white/50">
+
+                Phone Number
+
+              </label>
+
+              <input
+                type="tel"
+                placeholder="+880 1XXXXXXXXX"
+                class="w-full rounded-xl
+                border border-white/10
+                bg-white/[0.03]
+                px-4 py-3
+                text-sm text-white
+                outline-none
+                placeholder:text-white/20
+                transition
+                focus:border-[#e8b95c]/50
+                focus:bg-[#e8b95c]/5"
+              />
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="md:col-span-2">
+
+              <label
+                class="mb-2 block text-xs text-white/50">
+
+                Email Address
+
+              </label>
+
+              <input
+                type="email"
+                placeholder="example@gmail.com"
+                class="w-full rounded-xl
+                border border-white/10
+                bg-white/[0.03]
+                px-4 py-3
+                text-sm text-white
+                outline-none
+                placeholder:text-white/20
+                transition
+                focus:border-[#e8b95c]/50
+                focus:bg-[#e8b95c]/5"
+              />
+
+            </div>
+
+
+            <!-- Address -->
+
+            <div class="md:col-span-2">
+
+              <label
+                class="mb-2 block text-xs text-white/50">
+
+                Delivery Address
+
+              </label>
+
+              <input
+                type="text"
+                placeholder="House / Road / Area"
+                class="w-full rounded-xl
+                border border-white/10
+                bg-white/[0.03]
+                px-4 py-3
+                text-sm text-white
+                outline-none
+                placeholder:text-white/20
+                transition
+                focus:border-[#e8b95c]/50
+                focus:bg-[#e8b95c]/5"
+              />
+
+            </div>
+
+
+            <!-- District -->
+
+            <div>
+
+              <label
+                class="mb-2 block text-xs text-white/50">
+
+                District
+
+              </label>
+
+              <select
+                class="w-full rounded-xl
+                border border-white/10
+                bg-[#12100c]
+                px-4 py-3
+                text-sm text-white/60
+                outline-none
+                focus:border-[#e8b95c]/50">
+
+                <option>Select District</option>
+                <option>Dhaka</option>
+                <option>Chattogram</option>
+                <option>Sylhet</option>
+                <option>Rajshahi</option>
+
+              </select>
+
+            </div>
+
+
+            <!-- Area -->
+
+            <div>
+
+              <label
+                class="mb-2 block text-xs text-white/50">
+
+                Area
+
+              </label>
+
+              <input
+                type="text"
+                placeholder="Your area"
+                class="w-full rounded-xl
+                border border-white/10
+                bg-white/[0.03]
+                px-4 py-3
+                text-sm text-white
+                outline-none
+                placeholder:text-white/20
+                transition
+                focus:border-[#e8b95c]/50
+                focus:bg-[#e8b95c]/5"
+              />
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ================= SPECIAL NOTES ================= -->
+
+        <section
+          class="rounded-3xl
+          border border-white/10
+          bg-[#12100c]
+          p-6">
+
+          <p
+            class="text-[10px] font-semibold uppercase
+            tracking-[0.25em] text-[#e8b95c]">
+
+            Optional
+
+          </p>
+
+          <h2
+            class="mt-1
+            font-['Cormorant_Garamond']
+            text-3xl font-semibold">
+
+            Special Instructions
+
+          </h2>
+
+          <textarea
+            rows="4"
+            placeholder="Any special request for your order?"
+            class="mt-5 w-full resize-none rounded-xl
+            border border-white/10
+            bg-white/[0.03]
+            px-4 py-3
+            text-sm text-white
+            outline-none
+            placeholder:text-white/20
+            transition
+            focus:border-[#e8b95c]/50
+            focus:bg-[#e8b95c]/5">
+          </textarea>
+
+        </section>
+
+      </div>
+
+
+
+      <!-- ================================================= -->
+      <!-- RIGHT SIDE -->
+      <!-- ================================================= -->
+
+      <aside>
+
+        <div
+          class="sticky top-28 space-y-5">
+
+
+          <!-- ================= PAYMENT ================= -->
+
+          <section
+            class="rounded-3xl
+            border border-white/10
+            bg-[#12100c]
+            p-6">
+
+            <p
+              class="text-[10px] font-semibold uppercase
+              tracking-[0.25em] text-[#e8b95c]">
+
+              Payment
+
+            </p>
+
+            <h2
+              class="mt-1
+              font-['Cormorant_Garamond']
+              text-3xl font-semibold">
+
+              Payment Method
+
+            </h2>
+
+
+            <div class="mt-5 space-y-3">
+
+
+              <!-- COD -->
+
+              <label
+                class="flex cursor-pointer items-center
+                gap-3 rounded-xl
+                border border-[#e8b95c]/40
+                bg-[#e8b95c]/5
+                p-4">
+
+                <input
+                  type="radio"
+                  name="payment"
+                  checked
+                  class="accent-[#e8b95c]"
+                />
+
+                <div>
+
+                  <p class="text-sm font-medium">
+                    Cash on Delivery
+                  </p>
+
+                  <p class="mt-1 text-[11px] text-white/35">
+                    Pay when your order arrives
+                  </p>
+
+                </div>
+
+              </label>
+
+
+              <!-- Online -->
+
+              <label
+                class="flex cursor-pointer items-center
+                gap-3 rounded-xl
+                border border-white/10
+                p-4
+                transition
+                hover:border-[#e8b95c]/30">
+
+                <input
+                  type="radio"
+                  name="payment"
+                  class="accent-[#e8b95c]"
+                />
+
+                <div>
+
+                  <p class="text-sm font-medium">
+                    Online Payment
+                  </p>
+
+                  <p class="mt-1 text-[11px] text-white/35">
+                    Pay securely online
+                  </p>
+
+                </div>
+
+              </label>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- ================= COUPON ================= -->
+
+          <section
+            class="rounded-3xl
+            border border-white/10
+            bg-[#12100c]
+            p-6">
+
+            <p
+              class="text-[10px] font-semibold uppercase
+              tracking-[0.25em] text-[#e8b95c]">
+
+              Save More
+
+            </p>
+
+            <h2
+              class="mt-1
+              font-['Cormorant_Garamond']
+              text-2xl font-semibold">
+
+              Have a Coupon?
+
+            </h2>
+
+
+            <div class="mt-5 flex gap-2">
+
+              <input
+                type="text"
+                placeholder="Enter coupon"
+                class="min-w-0 flex-1 rounded-xl
+                border border-white/10
+                bg-white/[0.03]
+                px-4 py-3
+                text-xs text-white
+                outline-none
+                placeholder:text-white/20
+                focus:border-[#e8b95c]/50"
+              />
+
+              <button
+                class="rounded-xl
+                bg-[#e8b95c]
+                px-4
+                text-xs font-bold
+                text-black
+                transition
+                hover:bg-[#f0a400]">
+
+                Apply
+
+              </button>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- ================= SUMMARY ================= -->
+
+          <section
+            class="rounded-3xl
+            border border-[#e8b95c]/20
+            bg-gradient-to-b
+            from-[#17130c]
+            to-[#12100c]
+            p-6">
+
+            <p
+              class="text-[10px] font-semibold uppercase
+              tracking-[0.25em] text-[#e8b95c]">
+
+              Total
+
+            </p>
+
+            <h2
+              class="mt-1
+              font-['Cormorant_Garamond']
+              text-3xl font-semibold">
+
+              Order Summary
+
+            </h2>
+
+
+            <div class="my-6 h-px bg-white/10"></div>
+
+
+            <div class="space-y-4 text-sm">
+
+              <div class="flex justify-between">
+
+                <span class="text-white/40">
+                  Subtotal
+                </span>
+
+                <span id="subtotal">
+                  $83.00
+                </span>
+
+              </div>
+
+
+              <div class="flex justify-between">
+
+                <span class="text-white/40">
+                  Delivery
+                </span>
+
+                <span id="delivary">
+                  $5.00
+                </span>
+
+              </div>
+
+
+              <div class="flex justify-between">
+
+                <span class="text-white/40">
+                  Tax
+                </span>
+
+                <span id="tax">
+                  $4.15
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="my-6 h-px bg-white/10"></div>
+
+
+            <div class="flex items-end justify-between">
+
+              <span
+                class="font-['Cormorant_Garamond']
+                text-2xl font-semibold">
+
+                Total
+
+              </span>
+
+              <span id="total"
+                class="text-3xl font-semibold
+                text-[#e8b95c]">
+
+                $92.15
+
+              </span>
+
+            </div>
+
+
+            <!-- Terms -->
+
+            <label
+              class="mt-6 flex cursor-pointer gap-3">
+
+              <input
+                type="checkbox"
+                class="mt-1 accent-[#e8b95c]"
+              />
+
+              <span class="text-[11px] leading-5 text-white/40">
+
+                I agree to the
+                <span class="text-[#e8b95c]">
+                  Terms & Conditions
+                </span>
+                and
+                <span class="text-[#e8b95c]">
+                  Privacy Policy
+                </span>.
+
+              </span>
+
+            </label>
+
+
+            <!-- Place Order -->
+
+            <button
+              class="mt-6 flex w-full items-center
+              justify-center gap-2
+              rounded-xl
+              bg-[#e8b95c]
+              py-4
+              text-sm font-bold
+              text-black
+              transition-all duration-300
+              hover:bg-[#f0a400]
+              active:scale-[0.98]">
+
+              Place Order
+
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+
+            </button>
+
+
+            <a
+              href="./cart.html"
+              class="mt-3 flex w-full items-center
+              justify-center gap-2
+              py-2
+              text-xs text-white/40
+              transition
+              hover:text-[#e8b95c]">
+
+              <i class="fa-solid fa-arrow-left text-[10px]"></i>
+
+              Back to Cart
+
+            </a>
+
+
+            <div
+              class="mt-5 flex items-center
+              justify-center gap-2
+              text-[10px] text-white/25">
+
+              <i class="fa-solid fa-shield-halved"></i>
+
+              Secure checkout
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer
+    class="border-t border-white/10 bg-[#080706]">
+
+    <div
+      class="mx-auto grid max-w-7xl gap-10
+      px-5 py-14
+      sm:grid-cols-2
+      lg:grid-cols-4">
+
+
+      <!-- Brand -->
+
+      <div>
+
+        <img
+          src="./src/assets/images/logo.png"
+          alt="Restaurant Logo"
+          class="mb-5 h-12 w-auto"
+        />
+
+        <p class="max-w-xs text-sm leading-7 text-white/35">
+
+          Exceptional food, crafted with passion
+          and served with unforgettable hospitality.
+
+        </p>
+
+      </div>
+
+
+      <!-- Explore -->
+
+      <div>
+
+        <h3 class="mb-4 font-semibold">
+          Explore
+        </h3>
+
+        <div class="space-y-3 text-sm text-white/35">
+
+          <a
+            href="./index.html"
+            class="block transition hover:text-[#e8b95c]">
+            Home
+          </a>
+
+          <a
+            href="./index.html#menu"
+            class="block transition hover:text-[#e8b95c]">
+            Menu
+          </a>
+
+          <a
+            href="./index.html#about"
+            class="block transition hover:text-[#e8b95c]">
+            About
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Contact -->
+
+      <div>
+
+        <h3 class="mb-4 font-semibold">
+          Contact
+        </h3>
+
+        <div class="space-y-3 text-sm text-white/35">
+
+          <p>
+            <i class="fa-solid fa-location-dot mr-2 text-[#e8b95c]"></i>
+            Dhaka, Bangladesh
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone mr-2 text-[#e8b95c]"></i>
+            +880 1234 567890
+          </p>
+
+          <p>
+            <i class="fa-solid fa-envelope mr-2 text-[#e8b95c]"></i>
+            hello@restaurant.com
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Social -->
+
+      <div>
+
+        <h3 class="mb-4 font-semibold">
+          Follow Us
+        </h3>
+
+        <div class="flex gap-3">
+
+          <a
+            href="#"
+            class="flex h-10 w-10 items-center
+            justify-center rounded-full
+            border border-white/10
+            text-white/40
+            transition
+            hover:border-[#e8b95c]
+            hover:text-[#e8b95c]">
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+          </a>
+
+          <a
+            href="#"
+            class="flex h-10 w-10 items-center
+            justify-center rounded-full
+            border border-white/10
+            text-white/40
+            transition
+            hover:border-[#e8b95c]
+            hover:text-[#e8b95c]">
+
+            <i class="fa-brands fa-instagram"></i>
+
+          </a>
+
+          <a
+            href="#"
+            class="flex h-10 w-10 items-center
+            justify-center rounded-full
+            border border-white/10
+            text-white/40
+            transition
+            hover:border-[#e8b95c]
+            hover:text-[#e8b95c]">
+
+            <i class="fa-brands fa-twitter"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="border-t border-white/10 py-5 text-center">
+
+      <p class="text-xs text-white/20">
+        © 2026 Taste. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
+</html>

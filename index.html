@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/assets/css/all.min.css">
+  <link rel="stylesheet" href="./src/assets/css/style.css">
+  <title>class-58</title>
+</head>
+
+<body>
+
+  <header class="fixed left-0 top-0 z-50 w-full px-4 pt-5 sm:px-6 lg:px-10">
+
+    <nav class="mx-auto max-w-7xl overflow-hidden
+           rounded-[26px]
+           border border-[#d4a24c]/25
+           bg-[#0a0907]/80
+           backdrop-blur-2xl
+           shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+
+      <div class="flex h-[88px] items-center
+             justify-between px-5
+             sm:px-7 lg:px-10">
+
+        <!-- ================= LOGO ================= -->
+
+        <a href="#" class="group relative flex items-center">
+
+          <!-- Glow behind logo -->
+          <span class="absolute -left-3 h-16 w-16
+                 rounded-full
+                 bg-[#d4a24c]/10
+                 blur-2xl
+                 transition duration-500
+                 group-hover:bg-[#d4a24c]/20"></span>
+
+          <!-- Logo -->
+
+          <img id="logo" src="src/assets/images/logo.png" alt="Restaurant Logo" class="h-full w-full
+                   object-contain
+                   p-2
+                   transition-transform
+                   duration-500
+                   group-hover:scale-105" />
+
+        </a>
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="hidden lg:block">
+
+          <ul class="flex items-center gap-8 xl:gap-10">
+
+            <!-- Home -->
+            <li>
+              <a href="#" class="group relative block py-7
+                     text-sm font-medium
+                     text-[#e8b95c]">
+                Home
+
+                <span class="absolute bottom-3 left-1/2
+                       h-[2px] w-9
+                       -translate-x-1/2
+                       rounded-full
+                       bg-[#e8b95c]
+                       shadow-[0_0_10px_rgba(232,185,92,0.7)]"></span>
+              </a>
+            </li>
+
+
+            <!-- Menu -->
+            <li >
+              <a id="menuBtn" href="#menu" class="group relative block py-7
+                     text-sm font-medium
+                     text-white/70
+                     transition duration-300
+                     hover:text-[#e8b95c]">
+                Menu
+
+                <span class="absolute bottom-3 left-1/2
+                       h-[2px] w-0
+                       -translate-x-1/2
+                       rounded-full
+                       bg-[#e8b95c]
+                       transition-all duration-300
+                       group-hover:w-8"></span>
+              </a>
+            </li>
+
+
+            <!-- About -->
+            <li>
+              <a href="#about" class="group relative block py-7
+                     text-sm font-medium
+                     text-white/70
+                     transition duration-300
+                     hover:text-[#e8b95c]">
+                About
+
+                <span class="absolute bottom-3 left-1/2
+                       h-[2px] w-0
+                       -translate-x-1/2
+                       rounded-full
+                       bg-[#e8b95c]
+                       transition-all duration-300
+                       group-hover:w-8"></span>
+              </a>
+            </li>
+
+
+            <!-- Reservation -->
+            <li>
+              <a href="#reservation" class="group relative block py-7
+                     text-sm font-medium
+                     text-white/70
+                     transition duration-300
+                     hover:text-[#e8b95c]">
+                Reservations
+
+                <span class="absolute bottom-3 left-1/2
+                       h-[2px] w-0
+                       -translate-x-1/2
+                       rounded-full
+                       bg-[#e8b95c]
+                       transition-all duration-300
+                       group-hover:w-8"></span>
+              </a>
+            </li>
+
+
+            <!-- Contact -->
+            <li>
+              <a href="#contact" class="group relative block py-7
+                     text-sm font-medium
+                     text-white/70
+                     transition duration-300
+                     hover:text-[#e8b95c]">
+                Contact
+
+                <span class="absolute bottom-3 left-1/2
+                       h-[2px] w-0
+                       -translate-x-1/2
+                       rounded-full
+                       bg-[#e8b95c]
+                       transition-all duration-300
+                       group-hover:w-8"></span>
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <!-- ================= ACTION BUTTONS ================= -->
+        <div class="flex items-center gap-2 sm:gap-3">
+
+          <!-- Search -->
+          <button type="button" aria-label="Search" class="group flex h-11 w-11
+           items-center justify-center
+           rounded-full
+           border border-white/10
+           bg-white/[0.03]
+           text-white/70
+           transition-all duration-300
+           hover:border-[#e8b95c]/50
+           hover:bg-[#e8b95c]/10
+           hover:text-[#e8b95c]">
+            <i class="fa-solid fa-magnifying-glass
+             text-sm
+             transition-transform
+             duration-300
+             group-hover:scale-110"></i>
+          </button>
+
+
+          <!-- Cart -->
+          <a type="button" href="./cart.html" aria-label="Shopping Cart" class="group relative flex h-11 w-11
+           items-center justify-center
+           rounded-full
+           border border-white/10
+           bg-white/[0.03]
+           text-white/70
+           transition-all duration-300
+           hover:border-[#e8b95c]/50
+           hover:bg-[#e8b95c]/10
+           hover:text-[#e8b95c]">
+            <i class="fa-solid fa-cart-shopping
+             text-sm
+             transition-transform
+             duration-300
+             group-hover:scale-110"></i>
+
+            <!-- Cart Badge -->
+            <span id="Cart_Badge" class="animate-pulse absolute -right-1 -top-1
+             flex h-5 min-w-5
+             items-center justify-center
+             rounded-full
+             bg-[#e8b95c]
+             px-1
+             text-[10px]
+             font-bold
+             text-black
+             shadow-[0_0_12px_rgba(232,185,92,0.5)]">
+              0
+            </span>
+          </a>
+
+
+          <!-- Dashboard -->
+          <a href="./deshboard.html" class="group hidden sm:flex
+           h-11 items-center gap-2
+           rounded-full
+           border border-[#e8b95c]/50
+           bg-[#e8b95c]/10
+           px-5
+           text-sm font-semibold
+           text-[#e8b95c]
+           transition-all duration-300
+           hover:bg-[#e8b95c]
+           hover:text-black
+           hover:shadow-[0_0_25px_rgba(232,185,92,0.3)]">
+            <i class="fa-solid fa-gauge-high
+             text-sm
+             transition-transform duration-300
+             group-hover:scale-110"></i>
+
+            <span>Dashboard</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= MOBILE MENU ================= -->
+
+      <div id="mobileMenu" class="hidden border-t
+             border-white/10
+             px-5 pb-5 pt-4
+             lg:hidden">
+
+        <ul class="flex flex-col gap-1">
+
+          <li>
+            <a href="#" class="block rounded-xl
+                   bg-[#e8b95c]/10
+                   px-4 py-3
+                   text-sm font-medium
+                   text-[#e8b95c]">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#menu" class="block rounded-xl
+                   px-4 py-3
+                   text-sm text-white/70
+                   transition
+                   hover:bg-white/5
+                   hover:text-[#e8b95c]">
+              Menu
+            </a>
+          </li>
+
+          <li>
+            <a href="#about" class="block rounded-xl
+                   px-4 py-3
+                   text-sm text-white/70
+                   transition
+                   hover:bg-white/5
+                   hover:text-[#e8b95c]">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="#reservation" class="block rounded-xl
+                   px-4 py-3
+                   text-sm text-white/70
+                   transition
+                   hover:bg-white/5
+                   hover:text-[#e8b95c]">
+              Reservations
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" class="block rounded-xl
+                   px-4 py-3
+                   text-sm text-white/70
+                   transition
+                   hover:bg-white/5
+                   hover:text-[#e8b95c]">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <section class="relative flex min-h-screen items-center
+         overflow-hidden">
+    <!-- ================= BACKGROUND IMAGE ================= -->
+
+    <div class="absolute inset-0">
+
+      <img src="./src/assets/images/banner-bg.png" alt="Restaurant Interior" class="h-full w-full object-cover" />
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0
+             bg-black/35"></div>
+
+      <!-- Extra Gradient -->
+      <div class="absolute inset-0
+             bg-gradient-to-r
+             from-black/80
+             via-black/55
+             to-black/30"></div>
+
+      <!-- Bottom Fade -->
+      <div class="absolute bottom-0 left-0
+             h-40 w-full
+             bg-gradient-to-t
+             from-[#0a0907]
+             to-transparent"></div>
+
+    </div>
+
+
+    <!-- ================= HERO CONTENT ================= -->
+
+    <div class="relative z-10 mx-auto w-full
+           max-w-7xl px-6 pt-28
+           sm:px-8 lg:px-10">
+
+      <div class="max-w-3xl">
+
+        <!-- Small Heading -->
+
+        <div class="mb-6 flex items-center gap-3">
+
+          <span class="h-px w-10 bg-[#f0a400]"></span>
+
+          <p class="text-xs font-semibold
+                 uppercase tracking-[0.35em]
+                 text-[#f0a400]">
+            Welcome to our restaurant
+          </p>
+
+        </div>
+
+
+        <!-- Main Heading -->
+
+        <h1 class="font-['Cormorant_Garamond']
+               text-6xl font-semibold
+               leading-[0.9]
+               tracking-tight
+               text-white
+               sm:text-7xl
+               md:text-8xl
+               lg:text-[100px]">
+
+          Taste the
+          <span class="text-[#f0a400]">
+            Extraordinary.
+          </span>
+
+        </h1>
+
+
+        <!-- Description -->
+
+        <p class="mt-7 max-w-xl
+               text-sm leading-7
+               text-white/65
+               sm:text-base">
+          Discover beautifully crafted dishes made with
+          fresh ingredients, timeless recipes, and a passion
+          for unforgettable flavors.
+        </p>
+
+
+        <!-- ================= BUTTONS ================= -->
+
+        <div class="mt-9 flex flex-wrap
+               items-center gap-4">
+
+          <!-- Booking Button -->
+
+          <a href="#reservation" class="group inline-flex
+                 items-center gap-3
+                 rounded-full
+                 bg-[#f0a400]
+                 px-7 py-4
+                 text-sm font-semibold
+                 text-black
+                 shadow-[0_10px_30px_rgba(240,164,0,0.25)]
+                 transition-all duration-300
+                 hover:-translate-y-1
+                 hover:bg-[#ffb82e]
+                 hover:shadow-[0_15px_40px_rgba(240,164,0,0.4)]">
+
+            <span>
+              Book a Table
+            </span>
+
+            <i class="fa-solid fa-arrow-right
+                   text-xs
+                   transition-transform
+                   duration-300
+                   group-hover:translate-x-1"></i>
+
+          </a>
+
+
+          <!-- Menu Button -->
+
+          <a href="#menu" class="inline-flex
+                 items-center gap-3
+                 rounded-full
+                 border border-white/25
+                 bg-white/5
+                 px-7 py-4
+                 text-sm font-medium
+                 text-white
+                 backdrop-blur-sm
+                 transition-all duration-300
+                 hover:border-[#f0a400]
+                 hover:bg-[#f0a400]/10
+                 hover:text-[#f0a400]">
+
+            <i class="fa-solid fa-utensils text-xs"></i>
+
+            <span>
+              Explore Menu
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <!-- ================= SMALL INFO ================= -->
+
+        <div class="mt-10 flex flex-wrap
+               items-center gap-6
+               text-xs text-white/50">
+
+          <div class="flex items-center gap-2">
+
+            <i class="fa-solid fa-star text-[#f0a400]"></i>
+
+            <span>
+              Premium Dining
+            </span>
+
+          </div>
+
+
+          <span class="h-1 w-1 rounded-full bg-white/20"></span>
+
+
+          <div class="flex items-center gap-2">
+
+            <i class="fa-solid fa-leaf text-[#f0a400]"></i>
+
+            <span>
+              Fresh Ingredients
+            </span>
+
+          </div>
+
+
+          <span class="h-1 w-1 rounded-full bg-white/20"></span>
+
+
+          <div class="flex items-center gap-2">
+
+            <i class="fa-solid fa-heart text-[#f0a400]"></i>
+
+            <span>
+              Made with Love
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= SCROLL INDICATOR ================= -->
+
+    <div class="absolute bottom-8
+           left-1/2 z-10
+           hidden -translate-x-1/2
+           flex-col items-center
+           gap-3 sm:flex">
+
+      <span class="text-[9px]
+             uppercase tracking-[0.35em]
+             text-white/40">
+        Scroll
+      </span>
+
+      <div class="flex h-10 w-6
+             justify-center
+             rounded-full
+             border border-white/20
+             pt-2">
+
+        <span class="h-1.5 w-1
+               animate-bounce
+               rounded-full
+               bg-[#f0a400]"></span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="menu" class="bg-[#0a0907] px-5 py-24 sm:px-8 lg:px-10">
+    <div class="mx-auto max-w-7xl">
+
+      <!-- ================= SECTION HEADER ================= -->
+
+      <div class="mx-auto max-w-2xl text-center">
+
+        <div class="mb-4 flex items-center justify-center gap-3">
+          <span class="h-px w-10 bg-[#f0a400]"></span>
+
+          <span class="text-xs font-semibold uppercase
+                 tracking-[0.35em] text-[#f0a400]">
+            Our Menu
+          </span>
+
+          <span class="h-px w-10 bg-[#f0a400]"></span>
+        </div>
+
+        <h2 class="font-['Cormorant_Garamond']
+               text-5xl font-semibold
+               leading-tight text-white
+               sm:text-6xl">
+          Discover Our
+          <span class="text-[#f0a400]">
+            Delicious Foods
+          </span>
+        </h2>
+
+        <p class="mx-auto mt-5 max-w-xl
+               text-sm leading-7
+               text-white/50 sm:text-base">
+          Explore our delicious selection of freshly prepared
+          dishes, crafted with quality ingredients and served
+          with passion.
+        </p>
+
+      </div>
+
+
+      <!-- ================= FOOD CARDS ================= -->
+
+      <div id="homeCartList" class="mt-14 grid grid-cols-1 gap-6
+             sm:grid-cols-2
+             lg:grid-cols-3
+             xl:grid-cols-4">
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact" class="bg-[#080706] border-t border-white/10">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+
+      <!-- Footer Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+
+        <!-- 01. BRAND -->
+        <div>
+          <a href="#" class="inline-block mb-6">
+            <img src="./src/assets/images/logo.png" alt="Restaurant Logo" class="w-32 h-auto object-contain" />
+          </a>
+
+          <p class="text-white/50 text-sm leading-7 max-w-xs">
+            Experience delicious food, elegant atmosphere, and unforgettable
+            moments crafted with passion and served with love.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex items-center gap-3 mt-6">
+
+            <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center
+                   text-white/60 hover:text-[#f0a400] hover:border-[#f0a400]/50
+                   hover:bg-[#f0a400]/10 transition-all duration-300">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center
+                   text-white/60 hover:text-[#f0a400] hover:border-[#f0a400]/50
+                   hover:bg-[#f0a400]/10 transition-all duration-300">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center
+                   text-white/60 hover:text-[#f0a400] hover:border-[#f0a400]/50
+                   hover:bg-[#f0a400]/10 transition-all duration-300">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+          </div>
+        </div>
+
+
+        <!-- 02. QUICK LINKS -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-6 font-['Cormorant_Garamond']">
+            Quick Links
+          </h3>
+
+          <ul class="space-y-4">
+
+            <li>
+              <a href="#home" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#menu" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                Our Menu
+              </a>
+            </li>
+
+            <li>
+              <a href="#about" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                About Us
+              </a>
+            </li>
+
+            <li>
+              <a href="#reservation" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                Reservations
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+
+        <!-- 03. OPENING HOURS -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-6 font-['Cormorant_Garamond']">
+            Opening Hours
+          </h3>
+
+          <ul class="space-y-5">
+
+            <li class="flex flex-col gap-1">
+              <span class="text-white/80 text-sm">
+                Monday - Thursday
+              </span>
+
+              <span class="text-white/40 text-xs">
+                11:00 AM - 10:00 PM
+              </span>
+            </li>
+
+            <li class="flex flex-col gap-1">
+              <span class="text-white/80 text-sm">
+                Friday - Saturday
+              </span>
+
+              <span class="text-white/40 text-xs">
+                11:00 AM - 11:30 PM
+              </span>
+            </li>
+
+            <li class="flex flex-col gap-1">
+              <span class="text-white/80 text-sm">
+                Sunday
+              </span>
+
+              <span class="text-[#f0a400] text-xs">
+                12:00 PM - 10:00 PM
+              </span>
+            </li>
+
+          </ul>
+        </div>
+
+
+        <!-- 04. CONTACT -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-6 font-['Cormorant_Garamond']">
+            Contact Us
+          </h3>
+
+          <ul class="space-y-5">
+
+            <!-- Phone -->
+            <li class="flex items-start gap-4">
+
+              <span class="w-9 h-9 shrink-0 rounded-lg bg-[#f0a400]/10
+                     flex items-center justify-center text-[#f0a400]">
+                <i class="fa-solid fa-phone text-sm"></i>
+              </span>
+
+              <div>
+                <p class="text-white/30 text-xs mb-1">
+                  Call Us
+                </p>
+
+                <a href="tel:+8801234567890" class="text-white/70 text-sm hover:text-[#f0a400]
+                       transition-colors">
+                  +880 1234 567 890
+                </a>
+              </div>
+
+            </li>
+
+
+            <!-- Email -->
+            <li class="flex items-start gap-4">
+
+              <span class="w-9 h-9 shrink-0 rounded-lg bg-[#f0a400]/10
+                     flex items-center justify-center text-[#f0a400]">
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </span>
+
+              <div>
+                <p class="text-white/30 text-xs mb-1">
+                  Email
+                </p>
+
+                <a href="mailto:hello@restaurant.com" class="text-white/70 text-sm hover:text-[#f0a400]
+                       transition-colors">
+                  hello@restaurant.com
+                </a>
+              </div>
+
+            </li>
+
+
+            <!-- Location -->
+            <li class="flex items-start gap-4">
+
+              <span class="w-9 h-9 shrink-0 rounded-lg bg-[#f0a400]/10
+                     flex items-center justify-center text-[#f0a400]">
+                <i class="fa-solid fa-location-dot text-sm"></i>
+              </span>
+
+              <div>
+                <p class="text-white/30 text-xs mb-1">
+                  Location
+                </p>
+
+                <p class="text-white/70 text-sm leading-6">
+                  123 Food Street,<br />
+                  Dhaka, Bangladesh
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+
+      <!-- Bottom Footer -->
+      <div class="mt-14 pt-6 border-t border-white/10
+             flex flex-col md:flex-row items-center
+             justify-between gap-4">
+
+        <p class="text-white/30 text-xs text-center md:text-left">
+          © 2026 Restaurant. All rights reserved.
+        </p>
+
+        <div class="flex items-center gap-6">
+
+          <a href="#" class="text-white/30 text-xs hover:text-[#f0a400] transition-colors">
+            Privacy Policy
+          </a>
+
+          <a href="#" class="text-white/30 text-xs hover:text-[#f0a400] transition-colors">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "name": "Donovan Johnston",
+      "price": "764",
+      "ratting": "3",
+      "image": "Chicken_Burger.jpg",
+      "id": "oZ4P-c2x0TA"
+    },
+    {
+      "name": "Eden Head",
+      "price": "923",
+      "ratting": "1",
+      "image": "Chicken_Cheese_Pizza.jpg",
+      "id": "ks_TArkbCsY"
+    }
+  ],
+  "cart": [
+    {
+      "product": {
+        "name": "Donovan Johnston",
+        "price": "764",
+        "ratting": "3",
+        "image": "Chicken_Burger.jpg",
+        "id": "oZ4P-c2x0TA"
+      },
+      "quantity": 1,
+      "id": "zSKmZQcPjoE"
+    },
+    {
+      "product": {
+        "name": "Eden Head",
+        "price": "923",
+        "ratting": "1",
+        "image": "Chicken_Cheese_Pizza.jpg",
+        "id": "ks_TArkbCsY"
+      },
+      "quantity": 1,
+      "id": "eUvQWcW0R_c"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
