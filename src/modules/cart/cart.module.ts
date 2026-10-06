@@ -207,7 +207,7 @@ function renderCartItem() {
       >
 
         <img
-          src="./src/assets/images/foods/${item.image}"
+          src="./public/images/foods/${item.image}"
           alt="Chicken Burger"
           class="h-full w-full
                  object-cover
