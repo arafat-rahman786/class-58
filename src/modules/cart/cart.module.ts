@@ -6,7 +6,6 @@ let cart_togglers = document.querySelectorAll<HTMLElement>(".cart-toggler")
 let cart_section = document.getElementById("cart_section") as HTMLElement | null
 let homeCartList = document.getElementById("homeCartList") as HTMLElement | null
 let CartList = document.getElementById('CartList');
-let emptyCart = document.getElementById('emptyCart');
 let sub_total = document.getElementById('sub_total');
 let subtotal = document.getElementById('subtotal');
 let total = document.getElementById('total');
@@ -48,7 +47,7 @@ CartList?.addEventListener("click",(e:any)=>{
   let updateData = convertData.filter((item: ICart) => {
     return String(item.id) !== String(productId)
   });
-  let totalCalculation = updateData.reduce((total: number, current: ICart) => {
+updateData.reduce((total: number, current: ICart) => {
     return total + Number(current.totalPrice);
   }, 0);
   let modify:ICartStore = {

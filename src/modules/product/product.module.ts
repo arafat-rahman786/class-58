@@ -1,21 +1,18 @@
 import Swal from 'sweetalert2'
 import type { IProduct } from "./product.type";
-import type { ICart } from "./product.type";
 import api from "../../../lib/api";
 let from_deshboard = document.getElementById("from_deshboard") as HTMLFormElement | null;
 let foodlist: HTMLElement | null = document.getElementById("foodlist");
 let item_length: HTMLElement | null = document.getElementById("item_length");
 let homeCartList = document.getElementById("homeCartList") as HTMLElement | null
-let Cart_Badge_Chackout = document.getElementById("Cart_Badge_Chackout") as HTMLElement | null
-let subtotal = document.getElementById("subtotal") as HTMLElement | null
-let total = document.getElementById("total") as HTMLElement | null
+
 
 from_deshboard?.addEventListener("submit", async (e) => {
   e.preventDefault()
   let fromData = new FormData(from_deshboard)
   let enteries: any = Object.fromEntries(fromData)
   let validated = validate(enteries)
-  let res = await api.post('/products', validated)
+  await api.post('/products', validated)
   from_deshboard.reset()
   helpingRender()
 })
@@ -242,7 +239,22 @@ helpingRender()
 foodlist?.addEventListener("click", async (e: any) => {
   let deleteBtn = e.target.closest('.delete')
   let productId = deleteBtn.dataset.deleteId
-  await api.delete(`/products/${productId}`)
+  Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) Swal.fire({
+    title: "Deleted!",
+    text: "Your file has been deleted.",
+    icon: "success"
+  });
+});
+await api.delete(`/products/${productId}`)
   helpingRender()
 })
 
@@ -262,6 +274,13 @@ if (edit_food_form) {
       if (field) field.value = res.data[filled]
     }
   }
+  Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Your work has been saved",
+  showConfirmButton: false,
+  timer: 1500
+});
   getdata()
 }
 
@@ -283,6 +302,13 @@ edit_food_form?.addEventListener("submit", async (e) => {
     console.log("there is some problem");
 
   }
+Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Your work has been saved",
+  showConfirmButton: false,
+  timer: 1500
+});
 
 })
 
