@@ -92,7 +92,7 @@ async function helpingRender() {
 
           <div class="relative h-60 overflow-hidden">
 
-            <img src="./public/images/foods/${i.image}" alt="this is alt text" class="h-full w-full object-cover
+            <img src="/images/foods/${i.image}" alt="this is alt text" class="h-full w-full object-cover
                    transition duration-700
                    group-hover:scale-110" />
 
@@ -163,7 +163,7 @@ async function helpingRender() {
                    hover:bg-[#e8b95c]/[0.03]
                    sm:flex-row sm:items-center">
 
-                    <img src="./public/images/foods/${i.image}" alt="Chicken Burger"
+                    <img src="/images/foods/${i.image}" alt="Chicken Burger"
                         class="h-20 w-20 shrink-0 rounded-xl object-cover" />
 
                     <div class="min-w-0 flex-1">
