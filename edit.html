@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/assets/css/all.min.css">
+    <link rel="stylesheet" href="./src/assets/css/style.css">
+    <title>Edit Food | Restaurant</title>
+</head>
+
+<body class="min-h-screen bg-[#0a0907] text-white">
+
+    <!-- ================= HEADER ================= -->
+    <header class="border-b border-white/10 bg-[#0a0907]/90 backdrop-blur-xl">
+
+        <div class="mx-auto flex max-w-7xl items-center justify-between
+             px-5 py-5">
+
+            <!-- Logo -->
+
+            <a href="./deshboard.html">
+
+                <img src="./src/assets/images/logo.png" alt="Restaurant Logo" class="h-11 w-auto">
+
+            </a>
+
+
+            <!-- Back -->
+
+            <a href="./deshboard.html" class="flex items-center gap-2
+               rounded-xl
+               border border-white/10
+               px-4 py-2.5
+               text-xs font-semibold
+               text-white/60
+               transition
+               hover:border-[#e8b95c]/40
+               hover:text-[#e8b95c]">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Dashboard
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE ================= -->
+
+    <main class="mx-auto max-w-5xl px-5 py-14">
+
+
+        <!-- Heading -->
+
+        <div class="mb-10">
+
+            <p class="text-xs font-semibold uppercase
+               tracking-[0.3em]
+               text-[#e8b95c]">
+                Menu Management
+            </p>
+
+            <h1 class="mt-2
+               font-['Cormorant_Garamond']
+               text-5xl font-semibold">
+                Edit Food
+            </h1>
+
+            <p class="mt-3 max-w-xl text-sm leading-6 text-white/40">
+                Update your food information and keep your restaurant menu fresh.
+            </p>
+
+        </div>
+
+
+        <!-- ================= FORM CARD ================= -->
+
+        <section class="rounded-3xl
+             border border-white/10
+             bg-[#12100c]
+             p-6
+             md:p-8">
+
+
+            <form id="edit_food_form">
+
+                <!-- Form Header -->
+                <div class="mb-8 flex items-center gap-4
+                    border-b border-white/10 pb-6">
+                    <div class="flex h-12 w-12 items-center justify-center
+                      rounded-2xl
+                      bg-[#e8b95c]/10
+                      text-[#e8b95c]">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+
+                    <div>
+                        <h2 class="font-['Cormorant_Garamond']
+                           text-2xl font-semibold">
+                            Food Information
+                        </h2>
+
+                        <p class="mt-1 text-xs text-white/35">
+                            Change the information below
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- ================= PRODUCT ID ================= -->
+
+                <div class="mb-6">
+                
+                    <label for="id" class="mb-2 block text-sm font-medium text-white/70">
+                        Product ID
+                    </label>
+                
+                    <input id="id" name="id" type="text" placeholder="Product ID" readonly class="w-full rounded-xl
+                             border border-white/10
+                             bg-black/20
+                             px-4 py-3.5
+                             text-sm text-white/50
+                             outline-none
+                             cursor-not-allowed">
+                
+                </div>
+                
+                
+                <!-- ================= NAME ================= -->
+                
+                <div class="mb-6">
+                
+                    <label for="name" class="mb-2 block text-sm font-medium text-white/70">
+                        Food Name
+                    </label>
+                
+                    <input id="name" name="name" type="text" placeholder="Enter food name" class="w-full rounded-xl
+                             border border-white/10
+                             bg-white/[0.03]
+                             px-4 py-3.5
+                             text-sm text-white
+                             outline-none
+                             placeholder:text-white/20
+                             transition
+                             focus:border-[#e8b95c]/50
+                             focus:bg-[#e8b95c]/5">
+                
+                </div>
+                
+                
+                <!-- ================= RATING + PRICE ================= -->
+                
+                <div class="grid gap-6 md:grid-cols-2">
+                
+                    <!-- Rating -->
+                
+                    <div>
+                
+                        <label for="ratting" class="mb-2 block text-sm font-medium text-white/70">
+                            Rating
+                        </label>
+                
+                        <select id="ratting" name="ratting" class="w-full rounded-xl
+                               border border-white/10
+                               bg-[#12100c]
+                               px-4 py-3.5
+                               text-sm text-white/70
+                               outline-none
+                               transition
+                               focus:border-[#e8b95c]/50">
+                
+                            <option value="">
+                                Select Rating
+                            </option>
+                
+                            <option value="5">
+                                5 Stars
+                            </option>
+                
+                            <option value="4">
+                                4 Stars
+                            </option>
+                
+                            <option value="3">
+                                3 Stars
+                            </option>
+                
+                            <option value="2">
+                                2 Stars
+                            </option>
+
+                            <option value="1">
+                                1 Star
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Price -->
+
+                    <div>
+                    
+                        <label for="price" class="mb-2 block text-sm font-medium text-white/70">
+                            Price
+                        </label>
+                    
+                        <div class="relative">
+                    
+                            <span class="absolute left-4 top-1/2
+                                     -translate-y-1/2
+                                     text-sm font-semibold
+                                     text-[#e8b95c]">
+                                $
+                            </span>
+                    
+                            <input id="price" name="price" type="number" min="1" placeholder="Enter price" class="w-full rounded-xl
+                                     border border-white/10
+                                     bg-white/[0.03]
+                                     py-3.5 pl-9 pr-4
+                                     text-sm text-white
+                                     outline-none
+                                     placeholder:text-white/20
+                                     transition
+                                     focus:border-[#e8b95c]/50
+                                     focus:bg-[#e8b95c]/5">
+                    
+                        </div>
+                    
+                    </div>
+                    
+                    </div>
+                    
+                    
+                    <!-- ================= IMAGE + CATEGORY ================= -->
+                    
+                    <div class="mt-6 grid gap-6 md:grid-cols-2">
+                    
+                        <!-- Food Image -->
+                    
+                        <div>
+                    
+                            <label for="image" class="mb-2 block text-sm font-medium text-white/70">
+                                Food Image
+                            </label>
+                    
+                            <select id="image" name="image" class="w-full rounded-xl
+                                   border border-white/10
+                                   bg-[#12100c]
+                                   px-4 py-3.5
+                                   text-sm text-white/70
+                                   outline-none
+                                   transition
+                                   focus:border-[#e8b95c]/50">
+                    
+                                <option value="">
+                                    Select Food Image
+                                </option>
+                    
+                                <option value="Chicken_Burger.jpg">
+                                    Chicken Burger
+                                </option>
+                    
+                                <option value="Chicken_Cheese_Pizza.jpg">
+                                    Chicken Cheese Pizza
+                                </option>
+                    
+                                <option value="Chicken_Fry.jpg">
+                                    Chicken Fry
+                                </option>
+
+                            <option value="Chicken_Sandwich.jpg">
+                                Chicken Sandwich
+                            </option>
+
+                            <option value="Fry_Nurger.jpg">
+                                Fry Nurger
+                            </option>
+
+                            <option value="Grill_Chicken.jpg">
+                                Grill Chicken
+                            </option>
+
+                            <option value="Pasta.jpg">
+                                Pasta
+                            </option>
+
+                            <option value="Seekh_Kebab.jpg">
+                                Seekh Kebab
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Category -->
+
+                    <div>
+
+                        <label for="catagory" class="mb-2 block text-sm font-medium text-white/70">
+                            Category
+                        </label>
+
+                        <select id="catagory" name="catagory" class="w-full rounded-xl
+                                   border border-white/10
+                                   bg-[#12100c]
+                                   px-4 py-3.5
+                                   text-sm text-white/70
+                                   outline-none
+                                   transition
+                                   focus:border-[#e8b95c]/50">
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="Burger">
+                                Burger
+                            </option>
+
+                            <option value="Pizza">
+                                Pizza
+                            </option>
+
+                            <option value="Chicken">
+                                Chicken
+                            </option>
+
+                            <option value="Pasta">
+                                Pasta
+                            </option>
+
+                            <option value="Kebab">
+                                Kebab
+                            </option>
+
+                            <option value="Sandwich">
+                                Sandwich
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= BUTTONS ================= -->
+
+                <div class="mt-8 flex flex-col-reverse gap-3
+           border-t border-white/10
+           pt-6
+           sm:flex-row sm:justify-end">
+
+                    <a href="./deshboard.html" class="flex items-center justify-center gap-2
+             rounded-xl
+             border border-white/10
+             px-6 py-3
+             text-sm font-semibold
+             text-white/50
+             transition
+             hover:border-white/20
+             hover:text-white">
+                        Cancel
+                    </a>
+
+
+                    <button type="submit" class="flex items-center justify-center gap-2
+             rounded-xl
+             bg-[#e8b95c]
+             px-7 py-3
+             text-sm font-bold
+             text-black
+             transition-all duration-300
+             hover:bg-[#f0a400]
+             active:scale-95">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Update Food
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-[#080706] border-t border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+
+                <!-- 01. BRAND -->
+                <div>
+                    <a href="#" class="inline-block mb-6">
+                        <img src="./src/assets/images/logo.png" alt="Restaurant Logo"
+                            class="w-32 h-auto object-contain" />
+                    </a>
+
+                    <p class="text-white/50 text-sm leading-7 max-w-xs">
+                        Experience delicious food, elegant atmosphere, and unforgettable
+                        moments crafted with passion and served with love.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-3 mt-6">
+
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center
+                   text-white/60 hover:text-[#f0a400] hover:border-[#f0a400]/50
+                   hover:bg-[#f0a400]/10 transition-all duration-300">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center
+                   text-white/60 hover:text-[#f0a400] hover:border-[#f0a400]/50
+                   hover:bg-[#f0a400]/10 transition-all duration-300">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center
+                   text-white/60 hover:text-[#f0a400] hover:border-[#f0a400]/50
+                   hover:bg-[#f0a400]/10 transition-all duration-300">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- 02. QUICK LINKS -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6 font-['Cormorant_Garamond']">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-4">
+
+                        <li>
+                            <a href="#home" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#menu" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                                Our Menu
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#about" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#reservation" class="text-white/50 text-sm hover:text-[#f0a400]
+                     transition-colors duration-300">
+                                Reservations
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <!-- 03. OPENING HOURS -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6 font-['Cormorant_Garamond']">
+                        Opening Hours
+                    </h3>
+
+                    <ul class="space-y-5">
+
+                        <li class="flex flex-col gap-1">
+                            <span class="text-white/80 text-sm">
+                                Monday - Thursday
+                            </span>
+
+                            <span class="text-white/40 text-xs">
+                                11:00 AM - 10:00 PM
+                            </span>
+                        </li>
+
+                        <li class="flex flex-col gap-1">
+                            <span class="text-white/80 text-sm">
+                                Friday - Saturday
+                            </span>
+
+                            <span class="text-white/40 text-xs">
+                                11:00 AM - 11:30 PM
+                            </span>
+                        </li>
+
+                        <li class="flex flex-col gap-1">
+                            <span class="text-white/80 text-sm">
+                                Sunday
+                            </span>
+
+                            <span class="text-[#f0a400] text-xs">
+                                12:00 PM - 10:00 PM
+                            </span>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <!-- 04. CONTACT -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6 font-['Cormorant_Garamond']">
+                        Contact Us
+                    </h3>
+
+                    <ul class="space-y-5">
+
+                        <!-- Phone -->
+                        <li class="flex items-start gap-4">
+
+                            <span class="w-9 h-9 shrink-0 rounded-lg bg-[#f0a400]/10
+                     flex items-center justify-center text-[#f0a400]">
+                                <i class="fa-solid fa-phone text-sm"></i>
+                            </span>
+
+                            <div>
+                                <p class="text-white/30 text-xs mb-1">
+                                    Call Us
+                                </p>
+
+                                <a href="tel:+8801234567890" class="text-white/70 text-sm hover:text-[#f0a400]
+                       transition-colors">
+                                    +880 1234 567 890
+                                </a>
+                            </div>
+
+                        </li>
+
+
+                        <!-- Email -->
+                        <li class="flex items-start gap-4">
+
+                            <span class="w-9 h-9 shrink-0 rounded-lg bg-[#f0a400]/10
+                     flex items-center justify-center text-[#f0a400]">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </span>
+
+                            <div>
+                                <p class="text-white/30 text-xs mb-1">
+                                    Email
+                                </p>
+
+                                <a href="mailto:hello@restaurant.com" class="text-white/70 text-sm hover:text-[#f0a400]
+                       transition-colors">
+                                    hello@restaurant.com
+                                </a>
+                            </div>
+
+                        </li>
+
+
+                        <!-- Location -->
+                        <li class="flex items-start gap-4">
+
+                            <span class="w-9 h-9 shrink-0 rounded-lg bg-[#f0a400]/10
+                     flex items-center justify-center text-[#f0a400]">
+                                <i class="fa-solid fa-location-dot text-sm"></i>
+                            </span>
+
+                            <div>
+                                <p class="text-white/30 text-xs mb-1">
+                                    Location
+                                </p>
+
+                                <p class="text-white/70 text-sm leading-6">
+                                    123 Food Street,<br />
+                                    Dhaka, Bangladesh
+                                </p>
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Footer -->
+            <div class="mt-14 pt-6 border-t border-white/10
+             flex flex-col md:flex-row items-center
+             justify-between gap-4">
+
+                <p class="text-white/30 text-xs text-center md:text-left">
+                    © 2026 Restaurant. All rights reserved.
+                </p>
+
+                <div class="flex items-center gap-6">
+
+                    <a href="#" class="text-white/30 text-xs hover:text-[#f0a400] transition-colors">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="text-white/30 text-xs hover:text-[#f0a400] transition-colors">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script type="module" src="./src/main.ts"></script>
+</body>
+
+</html>

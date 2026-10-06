@@ -80,39 +80,6 @@
       <!-- Actions -->
 
       <div class="flex items-center gap-3">
-
-        <!-- Cart -->
-
-        <a
-          href="./cart.html"
-          class="relative flex h-11 w-11 items-center
-          justify-center rounded-full
-          border border-white/10
-          bg-white/[0.03]
-          text-white/70
-          transition-all duration-300
-          hover:border-[#e8b95c]/50
-          hover:bg-[#e8b95c]/10
-          hover:text-[#e8b95c]">
-
-          <i class="fa-solid fa-cart-shopping text-sm"></i>
-
-          <span
-            id="Cart_Badge_Chackout"
-            class="absolute -right-1 -top-1
-            flex h-5 min-w-5 items-center justify-center
-            rounded-full
-            bg-[#e8b95c]
-            px-1 text-[10px]
-            font-bold text-black">
-
-            
-
-          </span>
-
-        </a>
-
-
         <!-- Dashboard -->
 
         <a
@@ -315,6 +282,7 @@
               </label>
 
               <input
+                id="fullName"
                 type="text"
                 placeholder="Your full name"
                 class="w-full rounded-xl
@@ -344,6 +312,7 @@
               </label>
 
               <input
+              id="phoneNumber"
                 type="tel"
                 placeholder="+880 1XXXXXXXXX"
                 class="w-full rounded-xl
@@ -373,6 +342,7 @@
               </label>
 
               <input
+                id="email"
                 type="email"
                 placeholder="example@gmail.com"
                 class="w-full rounded-xl
@@ -402,6 +372,7 @@
               </label>
 
               <input
+                id="address"
                 type="text"
                 placeholder="House / Road / Area"
                 class="w-full rounded-xl
@@ -431,6 +402,7 @@
               </label>
 
               <select
+               id="district"
                 class="w-full rounded-xl
                 border border-white/10
                 bg-[#12100c]
@@ -462,6 +434,7 @@
               </label>
 
               <input
+                id="area"
                 type="text"
                 placeholder="Your area"
                 class="w-full rounded-xl
@@ -665,6 +638,7 @@
             <div class="mt-5 flex gap-2">
 
               <input
+              id="couponCode"
                 type="text"
                 placeholder="Enter coupon"
                 class="min-w-0 flex-1 rounded-xl
@@ -678,6 +652,7 @@
               />
 
               <button
+              id="applyCouponBtn"
                 class="rounded-xl
                 bg-[#e8b95c]
                 px-4
@@ -748,25 +723,11 @@
                   Delivery
                 </span>
 
-                <span id="delivary">
+                <span id="delivery">
                   $5.00
                 </span>
 
               </div>
-
-
-              <div class="flex justify-between">
-
-                <span class="text-white/40">
-                  Tax
-                </span>
-
-                <span id="tax">
-                  $4.15
-                </span>
-
-              </div>
-
             </div>
 
 
@@ -823,6 +784,7 @@
             <!-- Place Order -->
 
             <button
+              id="placeOrderBtn"
               class="mt-6 flex w-full items-center
               justify-center gap-2
               rounded-xl
